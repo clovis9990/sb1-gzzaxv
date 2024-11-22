@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .section-heading {
+    @apply text-3xl font-display font-bold relative pb-4 mb-8;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-24 h-1 bg-primary-600 rounded;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent;
+  }
+}
+
+.hero-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* React Big Calendar Custom Styles */
+.rbc-calendar {
+  @apply font-sans;
+}
+
+.rbc-header {
+  @apply py-2 font-semibold bg-gray-50;
+}
+
+.rbc-month-view {
+  @apply border-gray-200;
+}
+
+.rbc-date-cell {
+  @apply p-1 text-right;
+}
+
+.rbc-today {
+  @apply bg-primary-50;
+}
+
+.rbc-event {
+  @apply rounded-lg shadow-sm;
+}
+
+.rbc-toolbar button {
+  @apply px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-primary-600 text-white border-primary-600;
+}
+
+.rbc-toolbar-label {
+  @apply text-lg font-display font-semibold;
+}
